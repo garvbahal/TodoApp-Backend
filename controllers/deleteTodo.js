@@ -6,7 +6,7 @@ exports.deleteTodo = async (req, res) => {
 
     await Todo.findByIdAndDelete(id);
 
-    res.json({
+    res.status(200).json({
       success: true,
       message: "Todo DELETED",
     });
